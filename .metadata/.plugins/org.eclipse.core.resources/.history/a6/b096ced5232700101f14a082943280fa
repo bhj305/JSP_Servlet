@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%!
+/* 선언부 작성 */
+public int add(int num1, int num2){
+	return num1 + num2;
+}
+%>
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>스크립트 요소</title>
+	</head>
+	<body>
+		<%
+		int result = add(10, 20);
+		%>
+		덧셈결과1: <%=result %><br/>
+		덧셈결과2: <%= add(30,40) %>
+		
+		<h2>내가 만든 자바 클래스의 매서드 호출하기</h2>
+	</body>
+</html>
