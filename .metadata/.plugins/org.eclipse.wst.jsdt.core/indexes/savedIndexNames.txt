@@ -3,8 +3,5 @@ INDEX VERSION 1.4+/Users/baehyejin/DevData/JSP_Servlet/.metadata/.plugins/org.ec
 1864809811.index
 4227131391.index
 3022936674.index
-2076510019.index
-2076510019.index
-25353571.index
 3985442117.index
-1636270820.index
+25353571.index

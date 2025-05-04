@@ -14,6 +14,7 @@
 		<%
 		Date today = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		
 		String todayStr = dateFormat.format(today);
 		out.println("오늘 날짜: " + todayStr);
 		%>
