@@ -1,0 +1,26 @@
+package common; // 1. 기본패키지 이외의 패키지에 속해야 함.
+
+public class Person
+{
+//	2. 멤버변수의 접근 지정자는 private 로 선언해야 함.
+	private String name;
+	private int age;
+	
+//	3. 기본 생성자가 있어야 함.
+	public Person()
+	{
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+//	3. 기본생성자가 있어야 함.
+	public Person(String name, int age)
+	{
+		super();
+		this.name = name;
+		this.age = age;
+	}
+	
+	
+	
+}

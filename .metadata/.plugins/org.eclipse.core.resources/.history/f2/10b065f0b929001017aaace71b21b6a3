@@ -1,0 +1,24 @@
+<%-- main.jsp --%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
+    errorPage = "../01DirectiveScript/IsErrorPage.jsp"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>홈페이지</title>
+</head>
+<body>
+<%@ include file = "top.jsp" %>
+
+	<img src="../images/amazon.png" /><br>
+	<h1>안녕하세요</h1>
+	<h1>쇼핑몰 중심 JSP 홈페이지 입니다!!!</h1>
+	<h3>여기에 자료출력</h3>
+<ul>
+    <li><h3><a href="student/student.jsp">학생관리프로그램</a></h3>
+</ul>
+출처: https://jihunstudy.tistory.com/1 [blog:티스토리]
+</body>
+</html>
+

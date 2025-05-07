@@ -1,0 +1,39 @@
+package utils;
+
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class CookieManager
+{
+	public static void makeCookie(HttpServletResponse response, String cName,
+			String cValue, int cTime) {
+		Cookie cookie = new Cookie(cName, cValue);
+		cookie.setPath("/");
+		cookie.setMaxAge(cTime);
+		response.addCookie(cookie);
+	}
+	
+	public static String readCookie(HttpServletRequest request, String cName) {
+		String cookieValue = "";
+		
+		Cookie[] cookies = request.getCookies();
+		if(cookies != null) {
+			for(Cookie c : cookies) {
+				String cookieName = c.getName();
+				// 내가 찾는 쿠키명이 있는지 확인
+				if(cookieName.equals(cName)) {
+					// 쿠키명이 일치하면 쿠키값을 읽어서 저장
+					cookieValue = c.getValue();
+				}
+			}
+		}
+		// 읽은 값 반환
+		return cookieValue;
+	}
+	
+	public static void deleteCookie(HttpServletResponse response, String cName) {
+		// 이름과 시간 삭제
+		makeCookie(response, cName, "", 0);
+	}
+}

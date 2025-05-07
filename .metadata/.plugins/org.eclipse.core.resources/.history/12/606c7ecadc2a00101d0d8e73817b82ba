@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>내장객체 - out</title>
+	</head>
+	<body>
+		<%
+		out.print("출력되지 않는 텍스트"); // 버퍼에 저장됨
+		out.clearBuffer(); // 버퍼에 저장된 내용 삭제
+		
+		out.print("<h2>out 내장 객체</h2>");
+		out.print("출력 버퍼의 크기: " + out.getBufferSize() + "<br/>"); // 현재 페이지에 설정된 버퍼 크기를 가져옴
+		out.print("남은 버퍼의 크기: " + out.getRemaining() + "<br/>");
+		%>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+<%-- main.jsp --%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
+    errorPage = "../01DirectiveScript/IsErrorPage.jsp"%>
+
+<!-- index top region  -->
+<%@ include file = "top.jsp" %>
+ 
+<!-- index center region -->
+<h3>여기에 자료출력</h3>
+<ul>
+    <li><h3><a href="student/student.jsp">학생관리프로그램</a></h3>
+</ul>
+ 
+<!-- index bottom region -->
+<%@ include file = "bottom.jsp"%>

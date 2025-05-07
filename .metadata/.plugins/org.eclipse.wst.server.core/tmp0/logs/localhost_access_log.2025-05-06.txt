@@ -1,0 +1,6 @@
+127.0.0.1 - - [06/May/2025:21:57:22 +0900] "GET / HTTP/1.1" 404 808
+0:0:0:0:0:0:0:1 - - [06/May/2025:21:57:36 +0900] "GET /MustHaveJSP/01DirectiveScript/TrimWhitespace.jsp HTTP/1.1" 200 213
+127.0.0.1 - - [06/May/2025:22:02:07 +0900] "GET / HTTP/1.1" 404 808
+0:0:0:0:0:0:0:1 - - [06/May/2025:22:02:08 +0900] "GET /MustHaveJSP/01PersonalProject/index.jsp HTTP/1.1" 200 1558
+0:0:0:0:0:0:0:1 - - [06/May/2025:22:02:08 +0900] "GET /MustHaveJSP/images/amazon.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [06/May/2025:22:05:51 +0900] "GET /MustHaveJSP/02ImplicitObject/RequestHeader.jsp HTTP/1.1" 200 1388

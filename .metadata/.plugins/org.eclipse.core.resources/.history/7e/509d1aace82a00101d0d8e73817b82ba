@@ -1,0 +1,9 @@
+package common; // 1. 기본패키지 이외의 패키지에 속해야 함.
+
+public class Person
+{
+	private String name;
+	private int age;
+	
+	
+}

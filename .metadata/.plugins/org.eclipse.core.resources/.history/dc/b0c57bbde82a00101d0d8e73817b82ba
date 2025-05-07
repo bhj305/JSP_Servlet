@@ -1,0 +1,10 @@
+package common; // 1. 기본패키지 이외의 패키지에 속해야 함.
+
+public class Person
+{
+//	2. 멤버변수의 접근 지정자는 private 로 선언 
+	private String name;
+	private int age;
+	
+	
+}
