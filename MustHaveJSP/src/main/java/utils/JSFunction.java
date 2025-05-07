@@ -21,7 +21,7 @@ public class JSFunction
 			String script = ""
 					+"<script> "
 					+ "alert('" + msg + "');" 
-					+ "history.back();'"   
+					+ "history.back();"   
 //					+ "history.go(-1);'"   
 					+ "</script>";
 			out.println(script);
