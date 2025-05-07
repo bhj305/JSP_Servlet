@@ -4,21 +4,21 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="false"/>
 		<list key="findhistory">
+			<item value="loginid"/>
+			<item value="PopupClose"/>
+			<item value="form"/>
 			<item value="inactiveToday"/>
+			<item value="chkVal"/>
+			<item value="popupMode"/>
+			<item value="success"/>
+			<item value="popup"/>
+			<item value="closeBtn"/>
 			<item value="alertBack"/>
 			<item value="deleteCookie"/>
 			<item value="makeCookie"/>
 			<item value="loginIdloginId"/>
 			<item value="loginId"/>
-			<item value="closeBtn"/>
-			<item value="chkVal"/>
 			<item value="clos"/>
-			<item value="request"/>
-			<item value="response"/>
-			<item value="myNum"/>
-			<item value="loingErr"/>
-			<item value="err"/>
-			<item value="intro"/>
 		</list>
 	</section>
 </section>

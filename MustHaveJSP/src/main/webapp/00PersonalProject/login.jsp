@@ -3,11 +3,11 @@
     pageEncoding="UTF-8"%>
     
 <%
-String loginId = CookieManager.readCookie(request, "loginId");
 
-String cookieCheck ="";
-if(!loginId.equals("")){
-	cookieCheck = "checked";
+String loginEmail = CookieManager.readCookie(request, "loginEmail");
+String cookieCheck = "";
+if (!loginEmail.equals("")) {
+    cookieCheck = "checked";
 }
 
 %>
@@ -32,13 +32,13 @@ if(!loginId.equals("")){
                 <form action="EmailSaveProcess.jsp" method="post">
                     <div class="mb-4">
                         <label for="email" class="form-label text-muted">Email Address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                        <input type="email" class="form-control" name="user_email" id="email" value="<%= loginEmail %>" tabindex="1" placeholder="Email Address" required>
                     	<input type="checkbox" name = "save_check" value="Y" <%= cookieCheck %> />
                     	이메일 저장하기
                     </div>
                     <div class="mb-4">
                         <label for="password" class="form-label text-muted">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        <input type="password" class="form-control" name="user_pw" tabindex="2" id="password" placeholder="Password" required>
                     </div>
                     <div class="d-grid">
                         <button type="submit" class="btn btn-dark btn-lg">Sign in</button>
