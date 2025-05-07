@@ -12,6 +12,7 @@ if(cookies != null){
 		String cookieValue = c.getValue();
 		if(cookieName.equals("PopupClose")){
 			popupMode = cookieValue;
+			
 		}
 		
 	}
@@ -38,19 +39,13 @@ if(cookies != null){
 	$(function(){
 		$('#closeBtn').click(function(){
 			$('#popup').hide();
-			var chkVal = $("input:checkbox[id=inactiveToday]: checked").val();
+			var chkVal = $("input:checkbox[id=inactiveToday]:checked").val();
 			$.ajax({
 				url : './PopupCookie.jsp',
 				type : 'get',
 				data : {inactiveToday : chkVal},
 				dataType : 'text',
 				success : function(resData){
-					/* if(resData){
-						console.log('있다.');
-					}
-					else{
-						console.log('없다.');
-					} */
 					if(resData != '') location.reload();
 				}
 			});
@@ -62,7 +57,7 @@ if(cookies != null){
 	<h2>팝업 메인 페이지</h2>
 	<%
 		for(int i =1; i<=10 ; i++){
-			out.println("현재 팝업창은 "+ popupMode + "상태입니다.<br/>");
+			out.print("현재 팝업창은 "+ popupMode + "상태입니다.<br/>");
 		}
 		if(popupMode.equals("on")){
 	%>

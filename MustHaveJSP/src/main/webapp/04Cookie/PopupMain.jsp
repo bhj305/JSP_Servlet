@@ -12,6 +12,7 @@ if(cookies != null){
 		String cookieValue = c.getValue();
 		if(cookieName.equals("PopupClose")){
 			popupMode = cookieValue;
+			
 		}
 		
 	}

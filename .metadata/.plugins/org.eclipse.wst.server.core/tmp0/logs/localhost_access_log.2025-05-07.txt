@@ -206,3 +206,14 @@
 0:0:0:0:0:0:0:1 - - [07/May/2025:16:29:14 +0900] "POST /MustHaveJSP/04Cookie/IdSaveProcess.jsp HTTP/1.1" 200 96
 0:0:0:0:0:0:0:1 - - [07/May/2025:16:29:15 +0900] "GET /MustHaveJSP/04Cookie/IdSaveMain.jsp HTTP/1.1" 200 546
 0:0:0:0:0:0:0:1 - - [07/May/2025:16:31:10 +0900] "GET /MustHaveJSP/04Cookie/IdSaveMain.jsp HTTP/1.1" 200 546
+127.0.0.1 - - [07/May/2025:17:53:23 +0900] "GET / HTTP/1.1" 404 808
+0:0:0:0:0:0:0:1 - - [07/May/2025:17:53:24 +0900] "GET /MustHaveJSP/04Cookie/PopupMain_0.1.jsp HTTP/1.1" 200 1426
+0:0:0:0:0:0:0:1 - - [07/May/2025:17:53:24 +0900] "GET /favicon.ico HTTP/1.1" 404 819
+0:0:0:0:0:0:0:1 - - [07/May/2025:17:53:31 +0900] "GET /MustHaveJSP/04Cookie/PopupMain_0.1.jsp HTTP/1.1" 200 1426
+0:0:0:0:0:0:0:1 - - [07/May/2025:17:58:42 +0900] "GET /MustHaveJSP/04Cookie/PopupMain.jsp HTTP/1.1" 200 1680
+0:0:0:0:0:0:0:1 - - [07/May/2025:18:07:11 +0900] "GET /MustHaveJSP/04Cookie/IdSaveMain.jsp HTTP/1.1" 200 546
+0:0:0:0:0:0:0:1 - - [07/May/2025:18:11:43 +0900] "GET /MustHaveJSP/00PersonalProject/login.jsp HTTP/1.1" 200 1730
+0:0:0:0:0:0:0:1 - - [07/May/2025:18:16:13 +0900] "GET /MustHaveJSP/00PersonalProject/login.jsp HTTP/1.1" 200 1737
+0:0:0:0:0:0:0:1 - - [07/May/2025:18:17:09 +0900] "GET /MustHaveJSP/00PersonalProject/login.jsp HTTP/1.1" 200 1822
+0:0:0:0:0:0:0:1 - - [07/May/2025:18:17:19 +0900] "GET /MustHaveJSP/00PersonalProject/login.jsp HTTP/1.1" 200 1866
+0:0:0:0:0:0:0:1 - - [07/May/2025:18:18:42 +0900] "GET /MustHaveJSP/00PersonalProject/login.jsp HTTP/1.1" 200 1868
