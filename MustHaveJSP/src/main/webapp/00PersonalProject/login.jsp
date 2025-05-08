@@ -31,13 +31,13 @@ if (!loginEmail.equals("")) {
             <div class="mt-4">
                 <form action="EmailSaveProcess.jsp" method="post">
                     <div class="mb-4">
-                        <label for="email" class="form-label text-muted">Email Address</label>
-                        <input type="email" class="form-control" name="user_email" id="email" value="<%= loginEmail %>" tabindex="1" placeholder="Email Address" required>
+                        <label for="email" class="form-label text-muted">이메일 주소</label>
+                        <input type="email" class="form-control" name="user_email" id="email" value="<%= loginEmail %>" tabindex="1" placeholder="Email" required>
                     	<input type="checkbox" name = "save_check" value="Y" <%= cookieCheck %> />
                     	이메일 저장하기
                     </div>
                     <div class="mb-4">
-                        <label for="password" class="form-label text-muted">Password</label>
+                        <label for="password" class="form-label text-muted">비밀번호</label>
                         <input type="password" class="form-control" name="user_pw" tabindex="2" id="password" placeholder="Password" required>
                     </div>
                     <div class="d-grid">
