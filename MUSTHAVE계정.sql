@@ -78,3 +78,18 @@ INSERT INTO board VALUES (seq_board_num.nextval, '지금은 겨울입니다', '�
 commit;
 
 
+-- musthave 계정/ 9장 페이징 
+desc member;
+
+select * from member;
+
+SELECT id, pass, rownum FROM member;
+
+
+-- 뒤에서부터 차례대로 가져오기
+SELECT * FROM (
+    SELECT tb.*, rownum rNum FROM (
+        SELECT * FROM board ORDER BY num DESC
+    ) Tb
+) 
+WHERE rNum BETWEEN 1 AND 10;
