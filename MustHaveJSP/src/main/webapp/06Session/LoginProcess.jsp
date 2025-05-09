@@ -23,6 +23,7 @@ if(memberDTO.getId() != null){
 	/* 로그인이 성공하면 세션영역에 회원 아이디와 이름을 저장함. */
 	session.setAttribute("UserId", memberDTO.getId());
 	session.setAttribute("UserName", memberDTO.getName());
+	
 	/* 그리고 로그인 페이지로 이동한다. */
 	response.sendRedirect("LoginForm.jsp");
 } else{
