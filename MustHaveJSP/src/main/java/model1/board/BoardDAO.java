@@ -7,6 +7,7 @@ import java.util.Vector;
 
 import common.JDBConnect;
 import jakarta.servlet.ServletContext;
+import membership.MemberDTO;
 
 public class BoardDAO extends JDBConnect
 {
@@ -207,18 +208,18 @@ public class BoardDAO extends JDBConnect
 	public List<BoardDTO> selectListPage(Map<String, Object> map){
 		List<BoardDTO> bbs = new ArrayList<BoardDTO>();
 		String query = "SELECT * FROM ( "
-				+ "  SELECT tb.*, ROWNUM rNum FROM ( "
+				+ "  SELECT Tb.*, ROWNUM rNum FROM ( "
 				+ "    SELECT * FROM board ";
 		
 		if(map.get("searchWord") != null) 
 		{
-			query += " WHERE " + map.get("searchField") + " "
+			query += " WHERE " + map.get("searchField") 
 					+ " LIKE '%" + map.get("searchWord") + "%' ";
 		}
 		query += "    ORDER BY num DESC "
 				+ "    ) Tb "
 				+ "  ) "
-				+ " WHERE rNum BETWEEN ? AND ? ";
+				+ " WHERE rNum BETWEEN ? AND ?";
 		
 		try
 		{
@@ -249,4 +250,6 @@ public class BoardDAO extends JDBConnect
 		}
 		return bbs;
 	}
+	
+
 }

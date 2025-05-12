@@ -4,21 +4,21 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="false"/>
 		<list key="findhistory">
-			<item value="search"/>
-			<item value="검색"/>
-			<item value="totalcount"/>
-			<item value="virtualNum"/>
-			<item value="UserName"/>
-			<item value="getMemberDTO"/>
-			<item value="ses"/>
-			<item value="psmt"/>
-			<item value="dao"/>
-			<item value="person"/>
-			<item value="userId"/>
-			<item value="UserId"/>
-			<item value="dateFormat"/>
-			<item value="memberdto"/>
 			<item value="form"/>
+			<item value="bott"/>
+			<item value="d"/>
+			<item value="board"/>
+			<item value="insertWrite"/>
+			<item value="dao"/>
+			<item value="작성자"/>
+			<item value="num"/>
+			<item value="자유게시판"/>
+			<item value="&lt;table"/>
+			<item value="하기"/>
+			<item value="searchWord"/>
+			<item value="&amp;"/>
+			<item value="searchField"/>
+			<item value="selectCount"/>
 		</list>
 	</section>
 </section>

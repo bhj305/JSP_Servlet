@@ -18,7 +18,7 @@
 		<h3><a href="#">학생관리프로그램</a></h3>
 	</ul>
 	
- <%@ include file = "bottom.jsp" %>
+ <%@ include file = "Bottom.jsp" %>
  
 </body>
 </html>
