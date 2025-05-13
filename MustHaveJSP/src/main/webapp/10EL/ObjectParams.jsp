@@ -13,8 +13,6 @@
 		request.setAttribute("stringObj", "나는 문자열");
 		request.setAttribute("integerObj", new Integer(99));
 		%>
-		
-		
 		<!-- 액션태그를 통해 포워드 -->
 		<jsp:forward page="ObjectResult.jsp">
 			<jsp:param value="10" name="firstNum"/>

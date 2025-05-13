@@ -1,3 +1,4 @@
+<%@page import="java.util.Enumeration"%>
 <%@page import="common.Person"%>
 <%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -27,7 +28,7 @@
 		</ul>
 		
 		
-		<h4>자바빈즈 생성1 - 생성자 사용</h4>sfad
+		<h4>자바빈즈 생성1 - 생성자 사용</h4>
 		<c:set var="personVar1" value='<%= new Person("박문수", 50) %>' scope="request"/>
 		
 		<ul>
@@ -45,5 +46,17 @@
 			<li>나이: ${ requestScope.personVar2.age }</li>
 		</ul>
 		
+		
+		<!-- 현재 활성화된 session 출력 -->
+		<%
+		Enumeration<String> attrNames = session.getAttributeNames();
+
+	    // 키 값을 순회하며 값 출력
+	    while (attrNames.hasMoreElements()) {
+	        String attrName = attrNames.nextElement();
+	        Object attrValue = session.getAttribute(attrName);
+	        out.println("키: " + attrName + ", 값: " + attrValue + "<br>");
+	    }
+		%>
 	</body>
 </html>

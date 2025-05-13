@@ -81,6 +81,7 @@ dao.close(); // 자원해제
             </select>
             <input type="text" name="searchWord"/>
             <input type="submit" value="검색하기" />
+            <%-- <input type="hidden" name="pageNum" value= '<%= pageNum %>'> --%>
         </td>
     </tr>   
     </table>

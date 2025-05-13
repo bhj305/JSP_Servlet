@@ -14,6 +14,7 @@ public class BoardPage
 			pagingStr += "<a href='"+ reqUrl + "?pageNum=" + (pageTemp - 1) + "'>[이전 블록]</a>";
 		}
 		
+//		번호를 누를 떄 동작됨. 
 		int blockCount = 1;
 		while(blockCount <= blockPage && pageTemp <= totalPages) {
 			if(pageTemp == pageNum) {
@@ -25,6 +26,29 @@ public class BoardPage
 			pageTemp++;
 			blockCount++;
 		}
+		
+//		만약 검색이 있다면 같이 연결해서 동작하도록 처리해야함 !!
+//		int blockCount = 1;
+//		String searchWord= "";
+//		
+//			while(blockCount <= blockPage && pageTemp <= totalPages) {
+//				if(pageTemp == pageNum) {
+//					pagingStr += "&nbsp;" + pageTemp + "&nbsp;";
+//				} else if(searchWord != null) {
+//					pagingStr += "&nbsp;<a href='" + reqUrl + "?searchField=" 
+//							+    + "&searchWord=" +    +"&pageNum="+ pageTemp
+//							+ "'>" + pageTemp + "</a>&nbsp;";
+//				}
+//				
+//				else{
+//					pagingStr += "&nbsp;<a href='" + reqUrl +"?pageNum="+ pageTemp
+//							+ "'>" + pageTemp + "</a>&nbsp;";
+//				}
+//				pageTemp++;
+//				blockCount++;
+//			}
+		
+		
 		if(pageTemp <= totalPages){
 			pagingStr += "<a href='" + reqUrl +"?pageNum=" + pageTemp
 					+ "'>[다음 블록]</a>";
@@ -32,6 +56,7 @@ public class BoardPage
 			pagingStr += "<a href='" + reqUrl +"?pageNum=" + totalPages
 					+ "'>[마지막 페이지]</a>";
 		}
+		
 		return pagingStr;
 	}
 }

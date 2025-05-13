@@ -20,8 +20,8 @@ dao.close();
 		<meta charset="UTF-8">
 		<title>회원제 게시판</title>
 		<script>
+		
 		function deletePost() {
-			/* confirm함수는 대화창에서 "예"를 누르면 true 가 반환됨. */
 		    var confirmed = confirm("정말로 삭제하겠습니까?"); 
 		    if (confirmed) {
 		        var form = document.writeFrm;      

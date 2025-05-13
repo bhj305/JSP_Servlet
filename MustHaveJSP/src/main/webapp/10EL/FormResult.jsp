@@ -19,15 +19,16 @@
 			</li>
 		</ul>
 		<h3>JSP 내장 객체를 통해 폼값 받기</h3>
-		<%-- 
+		
 		<%
 		String name = request.getParameter("name");
 		String[] interArr = request.getParameterValues("inter");
 		
 		out.println("이름: " + name +"<br/>");
+		
 		/* 관심사항을 1개만 체크하면 error 발생 */
-		out.println("관심사항1: " + interArr[0] +"<br/>");
-		out.println("관심사항2: " + interArr[1] +"<br/>");
-		%> --%>
+		/* out.println("관심사항1: " + interArr[0] +"<br/>");
+		out.println("관심사항2: " + interArr[1] +"<br/>"); */
+		%> 
 	</body>
 </html>

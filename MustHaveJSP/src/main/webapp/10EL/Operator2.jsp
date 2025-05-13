@@ -28,9 +28,9 @@ pageContext.setAttribute("sizeZero", new ArrayList());
 		num1 ${num1}, num2 ${num2} <br/>
 		num1 gt num2 ? "참" : "거짓" => ${ num1 gt num2 ? "num1이 크다" : "num2가 크다"}<br/>
 		
-		<h3>null 연산</h3>
+		<%-- <h3>null 연산</h3>
 		null + 10 : ${ null + 10 } <br/>
 		nullStr + 10 : ${ nullStr + 10 } <br/>
-		param.noVar > 10 : ${ param.noVar > 10 } <br/>
+		param.noVar > 10 : ${ param.noVar > 10 } <br/> --%>
 	</body>
 </html>
