@@ -9,7 +9,7 @@
 	<body>
 		<h2>web.xml에서 매핑 후 JSP에서 출력하기</h2>
 		<p>
-		<!-- request 영역에 저장된 메세지 출력 -->
+			<!-- 3. request 영역에 저장된 메세지 출력 -->
 			<strong><%= request.getAttribute("message") %></strong>
 			<br/>
 			<!-- 서블릿 요청명을 지정 -->

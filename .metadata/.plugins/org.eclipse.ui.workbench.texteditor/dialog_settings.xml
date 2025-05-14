@@ -4,21 +4,21 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="false"/>
 		<list key="findhistory">
-			<item value="other"/>
-			<item value="user"/>
-			<item value="&quot;user&quot;"/>
-			<item value="session"/>
-			<item value="delete"/>
-			<item value="field"/>
-			<item value="searchField"/>
-			<item value="+"/>
-			<item value="sizeZero"/>
-			<item value="map"/>
-			<item value="form"/>
+			<item value="part"/>
+			<item value="attach"/>
+			<item value="header"/>
+			<item value="getheader"/>
+			<item value="fileupload"/>
+			<item value="filename"/>
+			<item value="admin_id"/>
+			<item value="welcom"/>
+			<item value="driver"/>
+			<item value="LifeCycle.do"/>
+			<item value="commandStr"/>
+			<item value="lastSlash"/>
+			<item value="reqUrl"/>
 			<item value="searchWord"/>
-			<item value="hef"/>
-			<item value="rjat"/>
-			<item value="a hre"/>
+			<item value="자료실"/>
 		</list>
 	</section>
 </section>

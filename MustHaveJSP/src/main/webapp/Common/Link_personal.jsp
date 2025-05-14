@@ -17,7 +17,18 @@
             <div class="btn-group">
                 <ul class="nav navbar-nav">
                     <li><a href="List.jsp">자유게시판</a></li>
-                    <li><a href="#">자료실</a></li>
+                    
+                    <li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          소개
+				        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			          <a class="dropdown-item" href="#">인사말</a><br/>
+			          <a class="dropdown-item" href="#">강사소개</a><br/>
+			          <a class="dropdown-item" href="#">찾아오시는길</a><br/>
+			        </div>
+                    </li>
+                    
                     <li><a href="#">방명록</a></li>
                     
                     <form class="navbar-form navbar-left" action="#">
@@ -26,8 +37,11 @@
                         </div>
                         <button type="submit" class="btn btn-default">Submit</button>
                     </form>
-                    <li ><a href="../00Board/SignUp.jsp">
-                        회원가입</a></li>
+                    <li >
+                    <% if(session.getAttribute("UserId") == null) {%>
+                    	<a href="../00Board/SignUp.jsp">회원가입</a>
+                    	<% } %>
+                    </li>
                     <li><a href="#">
                         회원정보수정</a></li>
                     <li>
@@ -40,7 +54,6 @@
 			            </li>
 			        <% } %>
                      </li>
-                    
                 </ul>
             </div>
         </div>

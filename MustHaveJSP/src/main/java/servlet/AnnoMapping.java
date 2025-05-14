@@ -3,20 +3,20 @@ package servlet;
 import java.io.IOException;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-public class HelloServlet extends HttpServlet
+@WebServlet("/12Servlet/AnnoMapping.do") // web.xml에 매핑하는 대신 @ 어노테이션을 사용하여 요청명에 대한 매핑을 함.
+public class AnnoMapping extends HttpServlet
 {
 	private static final long serialVersionUID = 1L; // 없으면 경고 뜸
-
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
-		req.setAttribute("message", "Hello Servlet..!!"); // 1. request 영역에 저장
-		req.getRequestDispatcher("/12Servlet/HelloServlet.jsp").forward(req, resp);// 2. view에 해당하는 JSP 페이지로 포워드함
-//		리퀘스트 영역은 포워드된 페이지까지 공유되므로 서블릿에서 저장한 속성값을 JSP에서도 사용할 수 있다.
+		req.setAttribute("message", "@WebServlet으로 매핑");
+		req.getRequestDispatcher("/12Servlet/AnnoMapping.jsp").forward(req, resp);
 	}
-	
 }

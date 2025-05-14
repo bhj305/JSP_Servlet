@@ -66,4 +66,6 @@ public class MemberDAO extends JDBConnect
 		}
 		return result;
 	}
+	
+//	회원정보수정을 위한 메서드
 }
