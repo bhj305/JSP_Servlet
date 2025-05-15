@@ -2,23 +2,26 @@
 <section name="Workbench">
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<section name="java.lang.Class">
-		<item key="replaceBarOpen" value="false"/>
+		<item key="replaceBarOpen" value="true"/>
 		<list key="findhistory">
-			<item value="part"/>
-			<item value="attach"/>
-			<item value="header"/>
-			<item value="getheader"/>
-			<item value="fileupload"/>
-			<item value="filename"/>
-			<item value="admin_id"/>
-			<item value="welcom"/>
-			<item value="driver"/>
-			<item value="LifeCycle.do"/>
-			<item value="commandStr"/>
-			<item value="lastSlash"/>
-			<item value="reqUrl"/>
-			<item value="searchWord"/>
-			<item value="자료실"/>
+			<item value="mvcboard"/>
+			<item value="MVCBoardWrite"/>
+			<item value="inser"/>
+			<item value="pagingImg"/>
+			<item value="view.do"/>
+			<item value="view"/>
+			<item value="paging"/>
+			<item value="va"/>
+			<item value="boardLists"/>
+			<item value="ArrayLis"/>
+			<item value="ArrayList"/>
+			<item value="boarddto"/>
+			<item value="_"/>
+			<item value="listFileName"/>
+			<item value="origin"/>
+		</list>
+		<list key="replacehistory">
+			<item value="MVCBoardDTO"/>
 		</list>
 	</section>
 </section>

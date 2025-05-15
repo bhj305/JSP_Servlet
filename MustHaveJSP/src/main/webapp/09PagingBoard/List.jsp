@@ -1,4 +1,5 @@
 <%@page import="utils.BoardPage"%>
+<%@page import="utils.BoardPage_수정"%>
 <%@page import="model1.board.BoardDTO"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.HashMap"%>
@@ -8,47 +9,47 @@
     pageEncoding="UTF-8"%>
     
 <%
-/* DB 연결 및 CRUD 작업을 위한 DAO 객체 생성 */
-BoardDAO dao = new BoardDAO(application);
+    /* DB 연결 및 CRUD 작업을 위한 DAO 객체 생성 */
+    BoardDAO dao = new BoardDAO(application);
 
-Map<String, Object> param = new HashMap<String, Object>();
-String searchField = request.getParameter("searchField");
-String searchWord = request.getParameter("searchWord");
+    Map<String, Object> param = new HashMap<String, Object>();
 
-/* 사용자의 입력한 검색어가 있다면 */
-if(searchWord != null)
-{
-	/* Map 컬렉션에 컬럼명과 검색어를 추가한다. */
-	param.put("searchField", searchField);
-	param.put("searchWord", searchWord);
-}
-/* Map 콜렉션을 인수로 게시물의 갯수를 카운트함(페이징을 위함) */
-int totalCount = dao.selectCount(param);
+    String searchField = request.getParameter("searchField");
+    String searchWord = request.getParameter("searchWord");
 
-/* 페이징 추가 */
-int pageSize = Integer.parseInt(application.getInitParameter("POSTS_PER_PAGE"));
-int blockPage = Integer.parseInt(application.getInitParameter("PAGES_PER_BLOCK"));
-/* 전체페이지 수 계산 (정수를 실수로 형변환해야함) */
-int totalPage = (int)Math.ceil((double)totalCount / pageSize);
-int pageNum = 1;
-String pageTemp = request.getParameter("pageNum");
-if(pageTemp != null && !pageTemp.equals("")){
-	pageNum = Integer.parseInt(pageTemp); /* 요청 받은 페이지로 수정 */
-} 
-int start = (pageNum -1 ) * pageSize +1; // 첫번째 게시물 번호
-int end = pageNum * pageSize; // 마지막 게시물 번호
-param.put("start", start);
-param.put("end", end);
+    /* 사용자의 입력한 검색어가 있다면 */
+    if(searchWord != null)
+    {
+    	/* Map 컬렉션에 컬럼명과 검색어를 추가한다. */
+    	param.put("searchField", searchField);
+    	param.put("searchWord", searchWord);
+    }
+    /* Map 콜렉션을 인수로 게시물의 갯수를 카운트함(페이징을 위함) */
+    int totalCount = dao.selectCount(param);
 
-List<BoardDTO> boardLists = dao.selectListPage(param);
+    /* 페이징 추가 */
+    int pageSize = Integer.parseInt(application.getInitParameter("POSTS_PER_PAGE"));
+    int blockPage = Integer.parseInt(application.getInitParameter("PAGES_PER_BLOCK"));
+    /* 전체페이지 수 계산 (정수를 실수로 형변환해야함) */
+    int totalPage = (int)Math.ceil((double)totalCount / pageSize);
+    int pageNum = 1;
+    String pageTemp = request.getParameter("pageNum");
+    if(pageTemp != null && !pageTemp.equals("")){
+    	pageNum = Integer.parseInt(pageTemp); /* 요청 받은 페이지로 수정 */
+    } 
+    int start = (pageNum -1 ) * pageSize +1; // 첫번째 게시물 번호
+    int end = pageNum * pageSize; // 마지막 게시물 번호
+    param.put("start", start);
+    param.put("end", end);
 
-/* 페이징 끝 */
+    List<BoardDTO> boardLists = dao.selectListPage(param);
 
-/* 목록에 출력할 게시물을 추출하여 반환받는다. */
-/* List<BoardDTO> boardLists = dao.selectList(param); */
-dao.close(); // 자원해제
+    /* 페이징 끝 */
 
-%>
+    /* 목록에 출력할 게시물을 추출하여 반환받는다. */
+    /* List<BoardDTO> boardLists = dao.selectList(param); */
+    dao.close(); // 자원해제
+    %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -58,7 +59,7 @@ dao.close(); // 자원해제
 	<body>
     <jsp:include page="../Common/Link.jsp" />  
 
-    <h2>목록 보기(List) - 현재페이지: <%= pageNum %> (전체: <%= totalPage %>)</h2>
+    <h2>목록 보기(List) - 현재페이지: <%=pageNum%> (전체: <%=totalPage%>)</h2>
     <form method="get">  <!-- 액션 값을 정하지 않았으므로 현재페이지로 전송됨. -->
     <table border="1" width="90%">
     <tr>
@@ -104,17 +105,17 @@ else {
         virtualNum = totalCount - (((pageNum - 1) * pageSize) + countNum++ );
 %>
         <tr align="center">
-            <td><%= virtualNum %></td>  
+            <td><%=virtualNum%></td>  
             <td align="left"> 
              <!-- 제목을 누르면  View.jsp로 넘어가는데 이때, num을 url로 보낸다-->
-                <a href="View.jsp?num=<%= dto.getNum() %>"><%= dto.getTitle() %></a> 
+                <a href="View.jsp?num=<%=dto.getNum()%>"><%=dto.getTitle()%></a> 
             </td>
-            <td align="center"><%= dto.getId() %></td>           
-            <td align="center"><%= dto.getVisitcount() %></td>   
-            <td align="center"><%= dto.getPostdate() %></td>    
+            <td align="center"><%=dto.getId()%></td>           
+            <td align="center"><%=dto.getVisitcount()%></td>   
+            <td align="center"><%=dto.getPostdate()%></td>    
         </tr>
 <%
-    }
+}
 }
 %>
     </table>
@@ -122,7 +123,7 @@ else {
     <table border="1" width="90%">
         <tr align="center">
        		<td>
-       			<%= BoardPage.pagingStr(totalCount, pageSize, blockPage, pageNum, request.getRequestURI()) %>
+       			<%=BoardPage.pagingStr(totalCount, pageSize, blockPage, pageNum, request.getRequestURI())%>
        		</td>
             <td><button type="button" onclick="location.href='Write.jsp';">글쓰기
                 </button></td>

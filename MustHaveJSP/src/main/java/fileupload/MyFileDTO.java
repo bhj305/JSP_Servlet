@@ -2,6 +2,7 @@ package fileupload;
 
 public class MyFileDTO
 {
+//	테이블 컬럼과 일치해야 함
 	private String idx;
 	private String title;
 	private String cate;
@@ -9,7 +10,7 @@ public class MyFileDTO
 	private String sfile;
 	private String postdate;
 	
-	
+//	Getter/ Setter 설정
 	public String getIdx()
 	{
 		return idx;
