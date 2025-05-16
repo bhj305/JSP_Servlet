@@ -52,7 +52,7 @@
 		            </td>  
 		            <td align="left"> 
 		             <!-- 제목을 누르면  View.jsp로 넘어가는데 이때, num을 url로 보낸다-->
-		                <a href="../mvcboard/View.do?idx=${ row.idx }"> ${ row.title }</a> 
+		                <a href="../mvcboard/view.do?idx=${ row.idx }"> ${ row.title }</a> 
 		            </td>
 		            <td> ${ row.name }</td>           
 		            <td> ${ row.visitcount }</td>   

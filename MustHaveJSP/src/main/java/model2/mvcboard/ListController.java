@@ -21,10 +21,11 @@ public class ListController extends HttpServlet
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
 			throws ServletException, IOException
 	{
-		MVCBoardDAO dao = new MVCBoardDAO();
+		MVCBoardDAO dao = new MVCBoardDAO(); // DAO 객체 생성을 통해 커넥션풀로 DB에 연결
 		
 		Map<String, Object> map = new HashMap<String, Object>();
 		
+//		request 내장 객체를 통해 파라미터를 가져옴
 		String searchField = req.getParameter("searchField");
 		String searchWord = req.getParameter("searchWord");
 
@@ -40,12 +41,13 @@ public class ListController extends HttpServlet
 		/* 페이징 추가 */
 		ServletContext application = getServletContext();
 		
+//		web.xml에 설정한 파라미터 가져오기
 		int pageSize = Integer.parseInt(application.getInitParameter("POSTS_PER_PAGE"));
 		int blockPage = Integer.parseInt(application.getInitParameter("PAGES_PER_BLOCK"));
 		
 //		현재 페이지 확인
 		int pageNum = 1;
-		String pageTemp = req.getParameter("pageNum");
+		String pageTemp = req.getParameter("pageNum"); // 파라미터로 넘어오는 pageNum 이 있다면 값을 얻어옴.
 		if(pageTemp != null && !pageTemp.equals("")){
 			pageNum = Integer.parseInt(pageTemp); /* 요청 받은 페이지로 수정 */
 		} 
@@ -62,14 +64,16 @@ public class ListController extends HttpServlet
 		
 		// 뷰에 전달할 매개변수 추가 
 		String pagingImg = BoardPage.pagingStr(totalCount, pageSize, blockPage, pageNum, "..//mvcboard/list.do");
-		map.put("pagingImg", pagingImg);
-		map.put("totalCount", totalCount);
-		map.put("pageSize", pageSize);
-		map.put("pageNum", pageNum);
+//		View 로 전달할 데이터를 map에 put(저장)한다.
+		map.put("pagingImg", pagingImg); // 목록 하단에 출력할 페이지 번호
+		map.put("totalCount", totalCount);  // 전체 게시물의 갯수
+		map.put("pageSize", pageSize); // 한 페이지당 출력할 게시물의 갯수(설정값)
+		map.put("pageNum", pageNum); // 현재 페이지 번호
 		
-//		request 영역에 생성 
+//		View 로 전달할 객체들을 request 영역에 생성 
 		req.setAttribute("boardLists", boardLists); 
 		req.setAttribute("map", map);
+//		View 로 포워드 해준다.
 		req.getRequestDispatcher("/14MVCBoard/List.jsp").forward(req, resp);
 	}
 }

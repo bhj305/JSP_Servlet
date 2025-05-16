@@ -4,21 +4,21 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="true"/>
 		<list key="findhistory">
+			<item value="download"/>
+			<item value="clien"/>
+			<item value="user-a"/>
+			<item value="agent"/>
+			<item value="path"/>
+			<item value="filename"/>
+			<item value="updateVisitCount"/>
+			<item value="pageNum"/>
+			<item value="view"/>
+			<item value="selectCount"/>
 			<item value="mvcboard"/>
 			<item value="MVCBoardWrite"/>
 			<item value="inser"/>
 			<item value="pagingImg"/>
 			<item value="view.do"/>
-			<item value="view"/>
-			<item value="paging"/>
-			<item value="va"/>
-			<item value="boardLists"/>
-			<item value="ArrayLis"/>
-			<item value="ArrayList"/>
-			<item value="boarddto"/>
-			<item value="_"/>
-			<item value="listFileName"/>
-			<item value="origin"/>
 		</list>
 		<list key="replacehistory">
 			<item value="MVCBoardDTO"/>
