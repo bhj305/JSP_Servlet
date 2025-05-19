@@ -81,6 +81,8 @@ else {
 %>
         <tr align="center">
             <td><%= virtualNum %></td>  
+
+            
             <td align="left"> 
              <!-- 제목을 누르면  View.jsp로 넘어가는데 이때, num을 url로 보낸다-->
                 <a href="View.jsp?num=<%= dto.getNum() %>"><%= dto.getTitle() %></a> 

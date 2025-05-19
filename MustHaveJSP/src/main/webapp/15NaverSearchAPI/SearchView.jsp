@@ -7,6 +7,7 @@
 		<title>네이버 검색 API</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script>
+		/* jquery 사용 */
 			$(function (){
 				$('#searchBtn').click(function() {
 					$.ajax({
@@ -28,6 +29,7 @@
 				$.each(d.items, function(index, item) {
 					str += "<ul>";
 					str += "	<li>" + (index + 1) + "</li>";
+					str += "	<li>" + item.link + "</li>";
 					str += "	<li>" + item.title + "</li>";
 					str += "	<li>" + item.description + "</li>";
 					str += "	<li>" + item.bloggername + "</li>";
